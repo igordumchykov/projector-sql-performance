@@ -1,0 +1,18 @@
+
+logging:
+  level:
+    ROOT: INFO
+    com.jdum.projector: DEBUG
+    org.springframework: INFO
+spring:
+  jpa:
+    generate-ddl: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/users
+    username: admin
+    password: admin
+    driverClassName: com.mysql.cj.jdbc.Driver
+application:
+  db:
+    total-users: 1_000
+    insert-number: 10_000

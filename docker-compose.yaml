@@ -1,0 +1,16 @@
+version: '3.6'
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    env_file: configuration.env
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./data.sql:/usr/tmp/data.sql
+
+volumes:
+  mysql_data: { }
